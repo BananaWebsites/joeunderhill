@@ -1,0 +1,505 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* TOP EMPTY BAR */
+.top-bar {
+  width: 100%;
+  height: 40px;      /* adjust height as needed */
+  background: #ffffff;
+}
+
+
+/* =====================
+   HERO SECTION
+   ===================== */
+
+.hero {
+  background: #dadada; /* soft pink */
+  padding: 7rem 0;
+}
+
+/* TOP ROW */
+.hero-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* IMAGE */
+.hero-image {
+  background: #faf9f7;          /* warm off-white */
+  padding: 10px;                /* frame thickness */
+  display: inline-block;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow:
+    8px 12px 30px rgba(0, 0, 0, 0.12); /* angled, soft */
+}
+
+
+/* TEXT */
+.hero-text {
+  color: #222;
+}
+
+.hero-eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #828282;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-rule {
+  display: block;
+  width: 300px;              /* short */
+  height: 1px;              /* very thin */
+  background: #a0a0a0;      /* soft gray */
+  margin: 1.25rem 0 1.75rem 0;
+}
+
+
+/* HEADLINE */
+.hero-text h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 900px) {
+  .hero-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+  }
+}
+
+
+/* =====================
+   ABOUT SECTION (MIRROR HERO)
+   ===================== */
+.about {
+  background: #f4f4f4; /* soft light background */
+  padding: 10rem 0;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* text left, image right */
+  gap: 4rem;
+  align-items: center;
+}
+
+/* IMAGE */
+.about-image {
+  background: #faf9f7;          /* off-white frame */
+  padding: 10px;                /* frame thickness */
+  display: inline-block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  box-shadow: 8px 12px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+/* TEXT */
+.about-text {
+  color: #222;
+}
+
+.about-eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #828282;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.about-rule {
+  display: block;
+  width: 300px;        /* short, same as hero */
+  height: 1px;         /* very thin */
+  background: #a0a0a0; /* soft gray */
+  margin: 1.25rem 0 1.75rem 0;
+}
+
+.about-text h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;       /* same as hero */
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.about-education {
+  list-style-type: disc;       /* bullet point */
+  padding-left: 1.5rem;        /* indent bullet */
+  margin-bottom: 1.75rem;      /* spacing before main paragraph */
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-text p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =====================
+   RESPONSIVE ABOUT
+   ===================== */
+@media (max-width: 900px) {
+  .about-top {
+    grid-template-columns: 1fr; /* stack text above image */
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.3rem;
+  }
+
+  .about-text p {
+    margin-top: 1rem;
+  }
+}
+
+
+/* =====================
+   EXPERIENCE SECTION
+   ===================== */
+.experience {
+  background: #000;  /* black background */
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.experience-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HEADER */
+.experience-header {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.5rem; /* slightly smaller than hero but still bold */
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+/* GRID FOR JOBS */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* JOB CONTAINER */
+.job-container {
+  background: #070707;       /* slightly lighter black for contrast */
+  padding: 2rem;
+  border-radius: 0px;
+  border: 2px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.job-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* TITLE AND TIME */
+.job-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.job-time {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+
+/* DESCRIPTION */
+.job-desc {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #ddd;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .experience-header {
+    font-size: 2.3rem;
+  }
+
+  .job-container {
+    margin-bottom: 2rem;
+  }
+}
+
+/* =====================
+   SKILLS SECTION
+   ===================== */
+.skills-section {
+  width: 100%;
+}
+
+.skills-inner {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 200px; /* section height */
+  width: 100%;
+}
+
+/* LEFT SIDE */
+.skills-left {
+  width: 50%;
+  background: #f4f4f4; /* light gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.skills-header {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* RIGHT SIDE */
+.skills-right {
+  width: 50%;
+  background: #fff; /* white */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.skills-list {
+  list-style-type: disc;
+  padding-left: 10rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.skills-list li {
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skills-inner {
+    flex-direction: column;
+  }
+
+  .skills-left,
+  .skills-right {
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  .skills-header {
+    font-size: 2.3rem;
+  }
+}
+
+/* SECTION SEPARATOR */
+.section-separator {
+  width: 100%;
+  height: 80px;         /* thickness of the line */
+  background: #fff;    /* white line */
+}
+
+
+/* =====================
+   HOBBIES SECTION
+   ===================== */
+.hobbies-section {
+  width: 100%;
+}
+
+.hobbies-inner {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 200px; /* section height */
+  width: 100%;
+}
+
+/* LEFT SIDE (white, paragraphs) */
+.hobbies-left {
+  width: 50%;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hobbies-left p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* RIGHT SIDE (gray, header) */
+.hobbies-right {
+  width: 50%;
+  background: #f4f4f4; /* light gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hobbies-header {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hobbies-inner {
+    flex-direction: column;
+  }
+
+  .hobbies-left,
+  .hobbies-right {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .hobbies-header {
+    font-size: 2.3rem;
+  }
+}
+
+
+/* =====================
+   CONTACT SECTION
+   ===================== */
+.contact-section {
+  background: #272727;   /* black background */
+  color: #fff;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.contact-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-header {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.contact-inner p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-inner,
+  .about-inner,
+  .experience-inner,
+  .contact-inner {
+    padding: 2.5rem 1.5rem;
+  }
+}
